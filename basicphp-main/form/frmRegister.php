@@ -46,23 +46,23 @@
             <div class="row">
               <!--row2-->
               <div class="col-md-3">
-                <label for="sex" class="form-label">Sex</label>
+                <label for="Sex" class="form-label">Sex</label>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="Sex" id="Sex" value="Male" checked>
+                  <label class="form-check-label" for="">
                     Male
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="Sex" id="Sex" value="Female">
+                  <label class="form-check-label" for="">
                     Female
                   </label>
                 </div>
               </div>
               <div class="col-md-3">
                 <label for="BD" class="form-label">Date of Birth</label>
-                <input type="text" class="form-control" id="BD" placeholder="dd/mm/yyyy" name="BD">
+                <input type="date" class="form-control" id="BD" placeholder="dd/mm/yyyy" name="BD">
               </div>
               <div class="col-md-6">
                 <label for="ad" class="form-label">Address</label>
@@ -70,11 +70,11 @@
               </div>
               <div class="col-md-3">
                 <label for="PNum" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="PNum" placeholder="Enter your phone number" name="PNum">
+                <input type="number" class="form-control" id="PNum" placeholder="Enter your phone number" name="PNum">
               </div>
               <div class="col-md-4">
                 <label for="Email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="Email" placeholder="Enter your Email" name="Email">
+                <input type="email" class="form-control" id="Email" placeholder="Enter your Email" name="Email">
               </div>
             </div>
             <br>

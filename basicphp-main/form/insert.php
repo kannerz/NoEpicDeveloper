@@ -5,22 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
+  <?php
+  include("config.inc.php");
+  ?>
+  <?php
+  $firstname = $_POST["fname"];
+  $name = $_POST["name"];
+  $lastname = $_POST["lname"];
+  $sex = $_POST["Sex"];
+  $birthdate = $_POST["BD"];
+  $address = $_POST["ad"];
+  $phone = $_POST["PNum"];
+  $email = $_POST["Email"];
+  ?>
 
-    𝓦𝓮𝓵𝓬𝓸𝓶𝓮 <?php echo $_POST["fname"]; ?>
-    <?php echo $_POST["name"]; ?>
-    <?php echo $_POST["lname"]; ?><br>
-    𝓨𝓸𝓾𝓻 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓽𝓮 <?php echo $_POST["BD"]; ?><br>
-    𝓨𝓸𝓾𝓻 𝓐𝓭𝓭𝓻𝓮𝓼𝓼 <?php echo $_POST["ad"]; ?><br>
-    𝓨𝓸𝓾𝓻 𝓔𝓶𝓪𝓲𝓵 <?php echo $_POST["Email"]; ?><br>
-    𝓨𝓸𝓾𝓻 𝓟𝓱𝓸𝓷𝓮 𝓝𝓾𝓶𝓫𝓮𝓻 <?php echo $_POST["PNum"]; ?><br>
+  𝓦𝓮𝓵𝓬𝓸𝓶𝓮 <?php echo $_POST["fname"]; ?>
+  <?php echo $_POST["name"]; ?>
+  <?php echo $_POST["lname"]; ?><br>
+  𝓖𝓮𝓷𝓭𝓮𝓻 <?php echo $_POST["Sex"]; ?><br>
+  𝓨𝓸𝓾𝓻 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓽𝓮 <?php echo $_POST["BD"]; ?><br>
+  𝓨𝓸𝓾𝓻 𝓐𝓭𝓭𝓻𝓮𝓼𝓼 <?php echo $_POST["ad"]; ?><br>
+  𝓨𝓸𝓾𝓻 𝓔𝓶𝓪𝓲𝓵 <?php echo $_POST["Email"]; ?><br>
+  𝓨𝓸𝓾𝓻 𝓟𝓱𝓸𝓷𝓮 𝓝𝓾𝓶𝓫𝓮𝓻 <?php echo $_POST["PNum"]; ?><br><br>
+
+
+  <?php
+  $sql = "INSERT INTO tbl_member (id, firstname, name, lastname, sex, birthdate, address, phone, email) VALUES ('', '$firstname', '$name', '$lastname', '$sex', '$birthdate', '$address', '$phone', '$email')";
+
+  if (mysqli_query($conn, $sql)) {
+    echo "░▒▓█►𝔸𝕕𝕕 𝕕𝕒𝕥𝕒 𝕤𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪◄█▓▒░";
+  } else {
+    echo "░▒▓█►𝔸𝕕𝕕 𝕕𝕒𝕥𝕒 𝕗𝕒𝕚𝕝𝕦𝕣𝕖◄█▓▒░";
+  }
+  $conn->close();
+  ?>
 
 </body>
 
 <style type="text/css">
-    body {
-        font-family: 'Athiti', sans-serif;
-        font-family: 'Itim', cursive;
-    }
+  body {
+    font-family: 'Athiti', sans-serif;
+    font-family: 'Itim', cursive;
+  }
 </style>
 <style>
   body {
